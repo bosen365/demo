@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>fullscreenbg</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="icon" type="image/x-icon" href="https://github.com/favicon.ico"/>
+<style type="text/css">
+    html{height: 100%;overflow:hidden}
+    body{background-size: cover;height: 100%;}
+    h1{
+		font-family: "Helvetica Neue",Helvetica;
+		font-size: 100px;
+		font-weight: bold;
+		letter-spacing: 2px;
+		color: #FFF;
+		text-align: center;
+		text-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+		margin:250px 0 140px -100px;
+	}
+</style>
+</head>
+<body>
+<h1>泥壕,世界</h1>
+<script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+		var bgArray = [
+				'http://ww4.sinaimg.cn/large/5fd37818jw1eg7x62lanlj20m80chade.jpg',
+				'http://ww3.sinaimg.cn/large/5fd37818jw1eg7x61uos3j20m80chdie.jpg',
+				'http://ww4.sinaimg.cn/large/5fd37818jw1eg7x5zf72tj20m80ch76n.jpg',
+				'http://ww2.sinaimg.cn/large/5fd37818jw1eg7x5swc8wj20m80chmzg.jpg',
+				'http://ww1.sinaimg.cn/large/5fd37818jw1eg2csdq98fj21hc0u0agl.jpg',
+				'http://ww4.sinaimg.cn/large/5fd37818jw1efub77bmq7j21ao0pa18a.jpg',
+				'http://ww4.sinaimg.cn/large/5fd37818jw1efub768hh4j218g0oqtv1.jpg',
+				'http://ww2.sinaimg.cn/large/5fd37818jw1efub75qpnvj21ao0v447z.jpg',
+				'http://ww3.sinaimg.cn/large/5fd37818jw1efub74x5zaj21ao0v6e1x.jpg',
+				'http://ww4.sinaimg.cn/large/5fd37818jw1eg20htn3ldj20zk0nyakp.jpg',
+				'http://ww1.sinaimg.cn/large/5fd37818jw1efub736xvqj21ao0t6gyn.jpg',
+				'http://ww1.sinaimg.cn/large/5fd37818jw1eg2cozhpvxj21ao0t64df.jpg',
+				'http://ww3.sinaimg.cn/large/5fd37818jw1efub71sby4j218g0totsu.jpg',
+				'http://ww1.sinaimg.cn/large/5fd37818jw1efub7142ncj21ao0s3tr7.jpg',
+				'http://ww3.sinaimg.cn/large/5fd37818jw1eg7x5siuzkj20m80chdhf.jpg'];
+		var bg = bgArray[Math.floor(Math.random()* bgArray.length)];
+		$('body').css('background', 'rgba(0, 0, 0, 0.9)');
+		$('body').css('background', 'url(' + bg + ') no-repeat center center fixed');
+		$('body').css('background-size', 'cover');
+});
+</script>
+</body>
+</html>

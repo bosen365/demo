@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>BigVideo.js demo - jQuery Plugin for Big Background Video</title>
+<meta charset="utf-8">
+<link rel="icon" type="image/x-icon" href="https://github.com/favicon.ico"/>
+<link rel="stylesheet" href="css/bigvideo.css">
+<style>
+body {
+	padding: 20px;
+	margin: 0;
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+</style>
+</head>
+<body>
+<script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+<script src="js/jquery-ui-1.8.22.custom.min.js"></script>
+<script src="js/video.js"></script>
+<!-- BigVideo -->
+<script src="js/bigvideo.js"></script>
+<!-- Demo -->
+<script>
+	$(function() {
+		var BV = new $.BigVideo();
+		BV.init();
+		BV.show('videos/Fermaten.mp4',{ambient:true});
+	});
+</script>
+</body>
+</html>

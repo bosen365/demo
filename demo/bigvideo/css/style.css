@@ -1,0 +1,41 @@
+*{
+	padding:0;
+	margin:0;
+}
+
+body{
+	background: #202020;
+	font-size:14px;
+	font-family: arial;
+}
+
+#logo{
+	margin: 20px 0px;
+	background: url('../images/logo.png');
+	width: 250px;
+	height: 57px;
+}
+
+h2{
+	clear:both;
+	padding-top:20px;
+}
+
+.main{
+	position:relative;
+	margin: 20px auto;
+	margin-top: 150px;
+	max-width: 1190px;
+	min-width:300px;
+	-webkit-transition-duration:0.6s;
+	-moz-transition-duration:0.6s;
+	-ms-transition-duration:0.6s;
+	-o-transition-duration:0.6s;
+	transition-duration:0.6s;
+	opacity: .7;
+	padding: 20px;
+	border-radius: 8px;
+	background: #202020;
+	color: #CCC;
+	box-shadow: 0px 0px 20px #ccc;
+}

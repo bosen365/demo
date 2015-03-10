@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<style type="text/css">
+		#content{width:1000px;margin:50px auto;}
+		#content > div{float:left;width:230px;margin:0 20px 20px 0;background:#eee;text-align:center;font-size:24px;color:#999;padding-top:20px;border-radius: 8px;}
+</style>
+<title>WaterFall</title>
+</head>
+<body>
+	<div id="content">
+		<div style="height:200px;">1</div>
+		<div style="height:100px;">2</div>
+		<div style="height:270px;">3</div>
+		<div style="height:320px;">4</div>
+		<div style="height:100px;">5</div>
+		<div style="height:260px;">6</div>
+		<div style="height:200px;">7</div>
+		<div style="height:120px;">8</div>
+		<div style="height:200px;">9</div>
+		<div style="height:240px;">10</div>
+		<div style="height:200px;">21</div>
+		<div style="height:100px;">22</div>
+		<div style="height:270px;">23</div>
+		<div style="height:320px;">24</div>
+		<div style="height:100px;">25</div>
+		<div style="height:260px;">26</div>
+		<div style="height:200px;">27</div>
+		<div style="height:120px;">28</div>
+		<div style="height:200px;">29</div>
+		<div style="height:240px;">30</div>
+	</div>
+	<div id="footer"></div>
+	<script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.waterfall.js"></script>
+	<script type="text/javascript">
+		var t = "";
+		$("#content").waterfall({
+			isResizable : true,
+			end:function(){
+				t = $("#footer").offset().top;
+			}		
+		});
+		
+		$(window).scroll(function(){
+			var a = $(window).scrollTop();
+
+			if( a + $(window).height() > t -10 ){
+				var html = "",
+					i = $("#content > div.waterfall").length,
+					n = i+10;
+					
+				for(i=i; i<=n; i++){
+					var h = parseInt( Math.random()*300 + 100 );
+					html += '<div style="height:'+h+'px;">'+i+'</div>';
+					
+				}
+
+				$("#content").append(html).waterfall({
+					isResizable : true,
+					end:function(){
+						t = $("#footer").offset().top;
+					}
+				});
+			}
+			
+		});
+	</script>
+</body>
+</html>

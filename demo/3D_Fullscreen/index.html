@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+<title>中国农业</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/mod.main.css"/>
+<link rel="apple-touch-icon-precomposed" href="img/ico-startup-57x57.png" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="max-age=0" />
+<meta name="apple-touch-fullscreen" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="Description" content="" />
+<meta name="Keywords" content="" />
+<link rel="stylesheet" href="css/idangerous.swiper.css"/>
+<link rel="stylesheet" href="css/idangerous.swiper.3dflow.css"/>
+</head>
+<style>
+.home-wapper{ width: 1800px; overflow: hidden;margin: 150px auto 0;}
+.swiper-container {width: 2454px;margin-left: -327px;padding-top: 10px;padding-bottom: 20px;}
+.swiper-slide { width:auto;  height:768px;background-size:cover;background-repeat:no-repeat;background-position:center;position: relative;}
+.swiper-slide a {position:absolute;left:0;top:0;width:100%;height:59%;z-index:1}
+
+button{
+	border: none;
+	width: 100px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	border-radius: 5px;
+	color: rgba(242, 242, 242, 0.5);
+	font-size: 14px;
+	background-color: rgba(240, 240, 240, 0.09);
+	box-shadow: 3px 3px 5px rgba(94, 94, 94, 0.2);
+	cursor: pointer;
+	margin-right: 10px;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+</style>
+<body>
+<section class="main">
+	<header class="header">中国农业</header>
+
+	<button id="view-fullscreen">全屏展示</button>
+    <button id="cancel-fullscreen">退出全屏</button>
+
+
+	<article class="home-wapper">
+		<div class="swiper-container">
+		    <div class="swiper-wrapper">
+
+	    	  <div class="swiper-slide" style="background-image:url(images/index-6.png)">
+		        <a href="#"></a>
+		      </div>
+			  
+		      <div class="swiper-slide" style="background-image:url(images/index-1.png)">
+		        <a></a>
+		      </div>
+
+		      <div class="swiper-slide" style="background-image:url(images/index-2.png)">
+		        <a></a>
+		      </div>
+
+		      <div class="swiper-slide" style="background-image:url(images/index-3.png)">
+		        <a></a>
+		      </div>
+
+		      <div class="swiper-slide" style="background-image:url(images/index-4.png)">
+		        <a></a>
+		      </div>
+
+		      <div class="swiper-slide" style="background-image:url(images/index-5.png)">
+		        <a></a>
+		      </div>
+
+		    </div>
+	    </div>
+	</article>
+</section>
+<script src="js/idangerous.swiper.js"></script>
+<script src="js/idangerous.swiper.3dflow.js"></script>
+<script>
+  var mySwiper = new Swiper('.swiper-container',{
+    slidesPerView: 3,
+    loop:true,
+    //Enable 3D Flow
+    tdFlow: {}
+  });
+
+(function () {
+	var viewFullScreen = document.getElementById("view-fullscreen");
+    if (viewFullScreen) {
+        viewFullScreen.addEventListener("click", function () {
+            var docElm = document.documentElement;
+            if (docElm.requestFullscreen) {
+                docElm.requestFullscreen();
+            }
+            else if (docElm.msRequestFullscreen) {
+                docElm.msRequestFullscreen();
+            }
+            else if (docElm.mozRequestFullScreen) {
+                docElm.mozRequestFullScreen();
+            }
+            else if (docElm.webkitRequestFullScreen) {
+                docElm.webkitRequestFullScreen();
+            }
+        }, false);
+    }
+
+    var cancelFullScreen = document.getElementById("cancel-fullscreen");
+    if (cancelFullScreen) {
+        cancelFullScreen.addEventListener("click", function () {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            }
+            else if (document.msExitFullscreen) {
+                document.msExitFullscreen();
+            }
+            else if (document.mozCancelFullScreen) {
+                document.mozCancelFullScreen();
+            }
+            else if (document.webkitCancelFullScreen) {
+                document.webkitCancelFullScreen();
+            }
+        }, false);
+    }
+})();
+</script>
+</body>
+</html>

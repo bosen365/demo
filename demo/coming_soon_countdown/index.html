@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Coming Soon...</title>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta name="author" content="MeMe">
+<meta name="keywords" content="MeMe">
+<meta name="description" content="MeMe">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--360 webkit-->
+<meta name="renderer" content="webkit">
+<!--Baidu no-transform-->
+<meta http-equiv="Cache-Control" content="no-transform " />
+<!--No user-scalable-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+<!-- Bootstrap and Font-awesome & nprogress-->
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+<style>
+a{
+	color:#AFAFAF;
+}
+a:hover {
+	text-decoration: none;
+	-webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    transition: 0.2s;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  background-color: #EDEFF0;
+  font-size:12px;
+  background:url('http://ww1.sinaimg.cn/large/5fd37818jw1eov021fl1rj20zk0np41e.jpg') no-repeat center center fixed;
+  background-size:cover;
+}
+.user-info{
+	display:block;
+	background-color: rgba(0,0,0,0.3);
+	border-radius: 5px;
+	min-height:200px;
+	padding-top:50px;
+	padding-left:150px;
+	padding-right:150px;
+	margin-top:50px;
+	margin-bottom:0px;
+	z-index:100;
+}
+.unit{
+	font-weight:500;
+	font-size:20px;
+	color:#CCC;
+}
+.num{
+	display:inline-block;
+	color:#FFF;
+	height:80px;
+	width:80px;
+	padding:10px;
+	font-size:40px;
+	line-height:60px;
+	background-color:rgba(255, 255, 255, 0.1);
+	border-radius: 10px;
+	margin:10px;
+}
+.second{
+	-webkit-transform-style:preserve-3d;
+	-moz-transform-style:preserve-3d;
+	transform-style:preserve-3d;
+
+	-webkit-transform-origin: 0 0;
+	-moz-transform-origin: 0 0;
+	transform-origin: 0 0;
+
+	-webkit-transition: all .6s;
+	-moz-transition: all .6s;
+	-o-transition: all .6s;
+	transition: all .6s;
+}
+.bounce{
+	
+}
+#hxtime{
+	margin-top:200px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 user-info" id="hxtime">
+		</div>
+	</div>
+</div>
+<script>  
+	function countDown(){  
+		var AfterTime= new Date("Nov 1 00:00:00  2015");  
+		LeaveTime = AfterTime - new Date();  
+		LeaveDays=Math.floor(LeaveTime/(1000*60*60*24));//天  
+		LeaveHours=Math.floor(LeaveTime/(1000*60*60)%24);//时  
+		LeaveMinutes=Math.floor(LeaveTime/(1000*60)%60);//分  
+		LeaveSeconds=Math.floor(LeaveTime/1000%60);//秒  
+		var c=new Date();  
+		var q=c.getMilliseconds();  
+		if(q<10)//因为毫秒为一位数时只占一个字符位置，会让毫秒二字变动位置  
+		{  
+			q="00"+c.getMilliseconds();  
+		}  
+		if(q>=10 && q<100)//因为毫秒为两位数时只占两个字符位置，会让毫秒二字变动位置  
+		{  
+			q="0"+c.getMilliseconds();  
+		}  
+		hxtime.innerHTML="<center><font class='num'>"+LeaveDays+"</font><span class='unit'>Days</span> <font class='num'>"+LeaveHours+"</font><span class='unit'>Hours</span> <font class='num'>"+LeaveMinutes+"</font><span class='unit'>Minutes</span> <font class='num second bounce'>"+LeaveSeconds+"</font><span class='unit'>Seconds</span></center>";  
+	}  
+	setInterval(countDown,10);  
+</script>
+</body>
+</html>
